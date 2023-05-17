@@ -44,7 +44,11 @@ const arrayBoxes = [
     [11, 0, 0]
 ];
 
-
+for (const row in arrayBoxes){
+    for (const col in arrayBoxes[row]){
+        createBox(row, col);
+    }
+}
 
 //select every elements with list-itm class
 const boxes = document.querySelectorAll(".list-itm");
