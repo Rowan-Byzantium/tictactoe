@@ -1,12 +1,23 @@
-//
+// -------------- FUNCTIONS --------------
+/**
+ * Get player turn 
+ * @returns {string} a sentence with player turn
+ */
+
+function getPlayerTurn(){
+    return `Your turn player ${counter%2+1}`; 
+}
+
+
+//--------------SCRIPT--------------------
+
+
 //select every elements with list-itm class
 const boxes = document.querySelectorAll(".list-itm");
 // Initialize a counter
 let counter = 0;
 console.log(getPlayerTurn());
-function getPlayerTurn(){
-    return `Your turn player ${counter%2+1}`;
-}
+
 
 
 //for each boxes 
