@@ -79,6 +79,11 @@ boxes.forEach(function (box) {
             this.innerHTML = "❌"; //put a cross in the box
             arrayBoxes[this.dataset.row][this.dataset.col] = 2;
         }
+        // compare 1st line's contents
+        if (arrayBoxes[0][0] === arrayBoxes[0][1] && arrayBoxes[0][1] === arrayBoxes[0][2] && arrayBoxes[0][0] !== 0){
+            console.log("gagnéééé");
+        }
+        
         counter++;
         displayPlayerTurn();
     })
