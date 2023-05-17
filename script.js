@@ -34,6 +34,10 @@ function createBox(row, col){
     return box;
 }
 
+function isWinningCombination(array) {
+    return (array[0] === array[1] && array[1] === array[2] && array[0] !== 0);
+}
+
 // -------------- SCRIPT -------------------
 /**
  * 0 = Empty
@@ -80,7 +84,19 @@ boxes.forEach(function (box) {
             arrayBoxes[this.dataset.row][this.dataset.col] = 2;
         }
         // compare 1st line's contents
-        if (arrayBoxes[0][0] === arrayBoxes[0][1] && arrayBoxes[0][1] === arrayBoxes[0][2] && arrayBoxes[0][0] !== 0){
+        if (
+            isWinningCombination(arrayBoxes[0])
+            ||
+            isWinningCombination(arrayBoxes[1])
+            ||
+            isWinningCombination(arrayBoxes[2])
+            ||
+            isWinningCombination(arrayBoxes.map(row => row[0]))
+            ||
+            isWinningCombination(arrayBoxes.map(row => row[1]))
+            ||
+            isWinningCombination(arrayBoxes.map(row => row[2]))
+        ){
             console.log("gagnéééé");
         }
         
