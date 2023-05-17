@@ -3,6 +3,10 @@
 const boxes = document.querySelectorAll(".list-itm");
 // Initialize a counter
 let counter = 0;
+console.log(getPlayerTurn());
+function getPlayerTurn(){
+    return `Your turn player ${counter%2+1}`;
+}
 
 
 //for each boxes 
@@ -13,8 +17,8 @@ boxes.forEach(function(box){
         
         //if the box is empty 
         if (this.innerHTML === ""){ 
-            counter++;
-            console.log(counter%2);
+
+            
             // if the counter is even then add a circle otherwise add a cross
             if (counter % 2 === 0) {
                 // add circle in box
@@ -22,7 +26,10 @@ boxes.forEach(function(box){
             }
             else {
                 this.innerHTML = "❌"; //put a cross in the box
+                // console.log("Player2"); 
             }
+            counter++;
+            console.log(getPlayerTurn());
         }
     
     })
