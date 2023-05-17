@@ -1,0 +1,62 @@
+
+/* RESET  */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --primary-color: #FFFCFF;
+    --secondary-color: #252627;
+    --third-color: #4B88A2;
+    --fourth-color: #D45113;
+    --fifth-color: #A3333D;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 2px;
+}
+
+.list-itm {
+    background-color: var(--third-color);
+    aspect-ratio: 1/1;
+}
