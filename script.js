@@ -5,20 +5,22 @@
  */
 
 function getPlayerTurn(){
-    return `Your turn player ${counter%2+1}`; 
+    return `Your turn player ${counter%2+1} !`; 
 }
 
+function displayPlayerTurn(){
+    document.getElementById('playerTurn').innerText = getPlayerTurn();
+}
 
-//--------------SCRIPT--------------------
+// -------------- SCRIPT -------------------
 
 
 //select every elements with list-itm class
 const boxes = document.querySelectorAll(".list-itm");
 // Initialize a counter
 let counter = 0;
-console.log(getPlayerTurn());
 
-
+displayPlayerTurn();
 
 //for each boxes 
 boxes.forEach(function(box){
@@ -40,7 +42,7 @@ boxes.forEach(function(box){
                 // console.log("Player2"); 
             }
             counter++;
-            console.log(getPlayerTurn());
+            displayPlayerTurn();
         }
     
     })
