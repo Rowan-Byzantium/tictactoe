@@ -3,11 +3,16 @@
  * Get player turn 
  * @returns {string} a sentence with player turn
  */
-
 function getPlayerTurn(){
     return `Your turn player ${counter%2+1} !`; 
 }
 
+
+/**
+ * 
+ * Display player turn
+ *
+ */
 function displayPlayerTurn(){
     document.getElementById('playerTurn').innerText = getPlayerTurn();
 }
@@ -30,7 +35,7 @@ boxes.forEach(function(box){
         
         //if the box is empty 
         if (this.innerHTML === ""){ 
-
+            return;
             
             // if the counter is even then add a circle otherwise add a cross
             if (counter % 2 === 0) {
